@@ -49,10 +49,7 @@ function App() {
             path="/profile"
             element={authUser ? <ProfilePage /> : <Navigate to="/" />}
           />
-          <Route
-          path="/test"
-          element={<Test/>}
-          />
+          
 
           <Route path="*" element={<ErrorPage />} />
         </Routes>
