@@ -41,6 +41,7 @@ export const useAuthStore = create((set, get) => ({
 
       // Ensure response has expected data
       if (res.data && res.data.token) {
+        console.log("jwt token: " + res.data.token);
         set({ authUser: res.data });
 
         showSuccess("Account created successfully");
@@ -74,6 +75,7 @@ export const useAuthStore = create((set, get) => ({
     set({ isLoggingIn: true });
     try {
       const res = await axiosInstance.post("/user/login", data);
+      console.log("jwt token: " + res.data.token);
       set({ authUser: res.data });
 
       showSuccess("Login successfull!");
