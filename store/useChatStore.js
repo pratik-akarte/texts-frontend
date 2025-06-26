@@ -17,7 +17,14 @@ export const useChatStore = create((set, get) => ({
       console.log(res.data);
       set({ users: res.data });
     } catch (error) {
-      console.error("Error in fetching users" + " " + error);
+      // Enhanced error message extraction
+      const errorMessage =
+        error.response?.data?.message ||
+        error.response?.data?.error ||
+        error.message ||
+        "Login failed";
+
+      console.error("Error in fetching users" + " " + errorMessage);
     } finally {
       set({ isUserLoading: false });
     }
@@ -60,19 +67,14 @@ export const useChatStore = create((set, get) => ({
     socket.on("newMessage", (newMessage) => {
       //if message sent from selected use or no if not just return
       if (newMessage.senderId !== selectedUser._id) return;
-       
-
 
       set({ messages: [...get().messages, newMessage] });
-
     });
   },
   unsubscribeToMessages: () => {
     const socket = useAuthStore.getState().socket;
     socket.off("newMessage");
   },
-
-  
 
   setSelectedUser: (selectedUser) => set({ selectedUser }),
 }));
