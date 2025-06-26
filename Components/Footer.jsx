@@ -9,10 +9,10 @@ const Footer = () => {
     //   </div>
     // </div>
 
-    <footer class="bg-[#171717] py-3 absolute w-full mt-16">
-      <div class="container mx-auto px-2 text-center">
-        <p class="text-[#F5E8D8] font-medium">
-          © 2025 <span class="text-[#DAA520] font-bold">texts.</span> All rights
+    <footer className="bg-[#171717] py-3 absolute w-full mt-16">
+      <div className="container mx-auto px-2 text-center">
+        <p className="text-[#F5E8D8] font-medium">
+          © 2025 <span className="text-[#DAA520] font-bold">texts.</span> All rights
           reserved.
         </p>
       </div>

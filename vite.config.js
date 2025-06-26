@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
-const BASE_URL = "http://localhost:5000/api";
+const BASE_URL = "https://texts-backend-476w.onrender.com/api";
 
 // https://vite.dev/config/
 export default defineConfig({
