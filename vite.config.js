@@ -8,6 +8,7 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   server: {
     port: 2703,
+    minify: 'esbuild',
     proxy: {
       "/api": {
         target: BASE_URL, // Your backend server
@@ -16,7 +17,7 @@ export default defineConfig({
       },
     },
     esbuild: {
-      pure: ['console.log'],
+      drop: ['console'],
     },
   },
 });
