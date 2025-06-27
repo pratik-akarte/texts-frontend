@@ -23,7 +23,7 @@ const Home = () => {
       </div>
 
       {/* Right - Login (Full width on mobile, half on md+) */}
-      <div className="w-full md:w-1/2 flex items-center justify-center  p-8 flex-col bg-base-200">
+      <div className="w-full  md:w-1/2 flex items-center justify-center  p-8 flex-col bg-base-200 min-h-screen md:min-h-0">
         <Flex
           fontWeight="bold"
           color="#F5E8D8"

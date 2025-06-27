@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import tailwindcss from "@tailwindcss/vite";
+import tailwindcss from "@tailwindcss/vite"; 
 import removeConsole from "vite-plugin-remove-console";
 const BASE_URL = "https://texts-backend-476w.onrender.com/api";
 

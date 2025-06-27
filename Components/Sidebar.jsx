@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Users } from "lucide-react";
 import { useChatStore } from "./../store/useChatStore";
 import "./sidebar.css";
@@ -11,15 +11,15 @@ const Sidebar = () => {
     useChatStore();
 
   const { onlineUsers } = useAuthStore();
-  const [showOnline, setShowOnline] = useState(false);
+  // const [showOnline, setShowOnline] = useState(false);
 
   useEffect(() => {
     getUsers();
   }, [getUsers]);
 
-  const filteredUsers = showOnline
-    ? users?.filter((user) => onlineUsers?.includes(user._id))
-    : users;
+  // const filteredUsers = showOnline
+  //   ? users?.filter((user) => onlineUsers?.includes(user._id))
+  //   : users;
 
   // const handleToggle = () => setShowOnline(!showOnline);
 
@@ -28,44 +28,6 @@ const Sidebar = () => {
   }
 
   return (
-    // <aside className="h-screen w-20 lg:w-72 flex flex-col  pt-5 bg-zinc-900">
-    //   <div className="flex items-center gap-2 mb-7 px-4 md:px-8 text-blue-100 mt-2 shrink-0 static  ">
-    //     <Users className="size-5" />
-    //     <span className="font-medium hidden lg:block ">Contacts</span>
-    //   </div>
-
-    //   <div className="flex-1 overflow-y-auto w-full space-y-2 px-2">
-    //     {users.map((user) => (
-    //       <button
-    //         key={user._id}
-    //         onClick={() => setSelectedUser(user)}
-    //         className={`sidebar-contact-btn ${
-    //           selectedUser?._id === user._id ? "selected" : ""
-    //         }`}
-    //       >
-    //         <div className="relative mx-auto lg:mx-0 my-2 px-2 lg:px-4">
-    //           <img
-    //             src={
-    //               user?.pic ||
-    //               "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_1280.png"
-    //             }
-    //             alt={user.name}
-    //             className="size-12 aspect-square  object-cover rounded-lg"
-    //           />
-    //           <span
-    //             className="absolute bottom-0 right-3 size-3 bg-green-500
-    //               rounded-full ring-2"
-    //           />
-    //         </div>
-
-    //         <div className="hidden lg:block min-w-0">
-    //           <p className="font-medium truncate text-blue-100">{user.name}</p>
-    //           <p className="text-sm text-zinc-400">Online</p>
-    //         </div>
-    //       </button>
-    //     ))}
-    //   </div>
-    // </aside>
     <aside className="h-full w-22 lg:w-80 flex flex-col bg-[#1e1e1e] transition-all duration-200 relative ">
       {/* Fixed Header */}
 
@@ -94,11 +56,11 @@ const Sidebar = () => {
 
       {/* Scrollable list */}
       <div className="overflow-y-auto w-full  ">
-        {filteredUsers.length === 0 && (
+        {users.length === 0 && (
           <div className="text-center text-zinc-600 py-8">No online users.</div>
         )}
 
-        {filteredUsers.map((user) => (
+        {users.map((user) => (
           <button
             key={user._id}
             onClick={() => setSelectedUser(user)}

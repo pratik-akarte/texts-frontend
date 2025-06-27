@@ -20,7 +20,17 @@
 
 @media (max-width: 768px) {
   .sidebar-contact-btn {
-    max-width: 70%;
+    max-width: 90%;
+    padding: 0%;
+  
+  }
+}
+
+@media (max-width: 600px) {
+  .sidebar-contact-btn {
+    max-width: 80%;
+    padding: 0%;
+  
   }
 }
 @media (min-width: 769px) and (max-width: 1023px) {
@@ -37,14 +47,14 @@
 }
 
 .sidebar-contact-btn:hover {
-  background-color: #df3e04cb; /* bg-purple-600 */
+  background-color: #df3e04cb;
 }
 
 .sidebar-contact-btn.selected {
   color: #444444;
-  background-color: #d09500; /* bg-purple-600 */
+  background-color: #d09500; 
 }
 
 .sidebar-contact-btn.selected:hover {
-  background-color: #daa520d7; /* bg-purple-700 */
+  background-color: #daa520d7; 
 }

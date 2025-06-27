@@ -26,7 +26,7 @@ const Navbar = () => {
               <div className="size-10 rounded-lg bg-gray-500/10 flex items-center justify-center">
                 <MessageSquareDot className="w-6 h-6 text-[#DAA520]" />
               </div>
-              <p className="text-2xl font-medium text-[#F5E8D8]">texts.</p>
+              <p className="text-xl lg:text-2xl font-medium text-[#F5E8D8]">texts.</p>
             </Link>
 
             {authUser && (
