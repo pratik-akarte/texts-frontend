@@ -34,9 +34,9 @@ const Home = () => {
           gap={"2"}
           justify="center"
         >
-          <MessageSquareDot className="w-11 h-11 text-[#DAA520]" />
+          <MessageSquareDot className="w-8 h-8 lg:w-11 lg:h-11 text-[#DAA520]" />
 
-          <p className="text-3xl font-medium text-[#F5E8D8]">texts.</p>
+          <p className="text-2xl lg:text-3xl font-medium text-[#F5E8D8]">texts.</p>
         </Flex>
         {activeTab === "tab1" && <Login />}
         {activeTab === "tab2" && <Signup />}
