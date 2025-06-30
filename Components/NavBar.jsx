@@ -18,7 +18,7 @@ const Navbar = () => {
     <header className="sticky bg-gray/60 backdrop-blur-lg rounded-2xl max-w-6xl mx-auto border-b border-gray-800 z-10 font-medium text-[#F5E8D8]">
       <div className="container px-4 h-16 ">
         <div className="flex items-center justify-center h-full">
-          <div className="flex items-center justify-between w-full max-w-4xl">
+          <div className="flex items-center justify-between w-full ">
             <Link
               to="/"
               className="flex items-center gap-2.5 hover:opacity-80 transition-all"

@@ -27,8 +27,8 @@ function App() {
 
   if (isCheckingAuth && !authUser) {
     return (
-      <div className="flex items-center justify-center h-screen">
-        <Loader className="size-10 animate-spin" />
+      <div className="flex items-center justify-center h-screen  bg-[#171717]">
+        <Loader className="size-20 text-amber-100 animate-spin" />
       </div>
     );
   }
@@ -49,7 +49,6 @@ function App() {
             path="/profile"
             element={authUser ? <ProfilePage /> : <Navigate to="/" />}
           />
-          
 
           <Route path="*" element={<ErrorPage />} />
         </Routes>
